@@ -50,8 +50,7 @@ bool contains(Node* head, int target) {
 int main() {
     Node* head = nullptr;
 
-    // Part 1: build list 10 -> 20 -> 30 -> 40 -> 50
-    // push_front adds to the front, so insert in reverse order
+    // Part 1
     head = push_front(head, 50);
     head = push_front(head, 40);
     head = push_front(head, 30);
@@ -59,17 +58,17 @@ int main() {
     head = push_front(head, 10);
     print_list(head);
 
-    // Part 2: count nodes
+    // Part 2
     cout << "Count: " << count_nodes(head) << endl;
 
-    // Part 3: remove first two nodes and print after each
+    // Part 3
     head = remove_head(head);
     print_list(head);
     head = remove_head(head);
     print_list(head);
     cout << "Count: " << count_nodes(head) << endl;
 
-    // Part 4: search for values
+    // Part 4
     cout << "Contains 40? " << contains(head, 40) << endl;
     cout << "Contains 99? " << contains(head, 99) << endl;
 
